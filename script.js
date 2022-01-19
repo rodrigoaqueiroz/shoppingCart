@@ -47,9 +47,17 @@ function clearCart() {
       getProductsList[0].remove();
     }
     const clearCurrent = document.getElementsByClassName('total-price')[0];
-    clearCurrent.innerText = parseFloat(0);
+    clearCurrent.innerText = parseFloat(0).toFixed(2);
     window.localStorage.clear();
   });
+}
+
+function clearOnLoad() {
+  const getProductsList = document.getElementsByTagName('li');
+  while (getProductsList.length > 0) {
+    getProductsList[0].remove();
+  }
+  window.localStorage.clear();
 }
 
 function saveToLocalStorage() {
@@ -129,6 +137,7 @@ function getLocalStorage() {
 }
 
 window.onload = function onload() { 
+  clearOnLoad();
   getData('computador');
   getLocalStorage();
   clearCart();
