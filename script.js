@@ -4,14 +4,14 @@ async function totalValue(price) {
     current.innerText = price;
   } else {
     const getValue = parseFloat(current.innerText) + price;
-    current.innerText = parseFloat(getValue);
+    current.innerText = parseFloat(getValue).toFixed(2);
   }
  }
 
 async function sub(price) {
   const current = document.querySelector('.total-price');
   const newValue = parseFloat(current.innerText) - price;
-  current.innerText = parseFloat(newValue);
+  current.innerText = parseFloat(newValue).toFixed(2);
 }
 
 function createProductImageElement(imageSource) {
@@ -46,6 +46,8 @@ function clearCart() {
     while (getProductsList.length > 0) {
       getProductsList[0].remove();
     }
+    const clearCurrent = document.getElementsByClassName('total-price')[0];
+    clearCurrent.innerText = parseFloat(0);
     window.localStorage.clear();
   });
 }
