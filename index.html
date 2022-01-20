@@ -11,8 +11,11 @@
   </head>
 
   <body>
+    <header>
+    <h1>Rod's Market</h1>
     <input class = 'search-bar' type = 'text' name = 'query' placeholder= "buscar um novo produto">   
     <button class = 'btn-search' type = 'submit'>Buscar</button>
+  </header>
     <section class="container">
       <section class="items"></section>
       <p class = 'loading'>Loading...</p>
@@ -21,6 +24,7 @@
         <button class="empty-cart">Esvaziar carrinho</button>
         <ul class="cart__items"></ul>
         <p>Preço total: $<span class = 'total-price'>0.00</span></p>
+        <button class="buy">Fechar pedido</button>
       </section>
     </section>
   </body>

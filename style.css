@@ -1,3 +1,8 @@
+body {
+  text-align: center;
+  background-color: white;
+}
+
 .top-bar {
   align-items: center;
   display: flex;
@@ -28,10 +33,11 @@
   flex-basis: 70%;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .item {
-  border: 2px solid blue;
+  border: 2px solid rgb(35, 124, 154);
   border-radius: 5px;
   box-sizing: border-box;
   display: flex;
@@ -56,17 +62,27 @@
 }
 
 .item .item__add {
-  background-color: green;
+  background-color: rgb(54, 165, 170);
   border: 0;
   cursor: pointer;
   margin: 0;
   padding: 5px;
+  font-weight: 700;
+}
+
+.item__add:hover {
+  background-color: rgb(234, 159, 51);
+}
+
+.cart__title {
+  margin-bottom: 16px;
 }
 
 .cart {
   display: flex;
   flex-basis: 30%;
   flex-flow: column wrap;
+  align-items: center;
 }
 
 .cart .cart__title {
@@ -74,3 +90,52 @@
   font-size: 16pt;
   text-align: center;
 }
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 4px;
+}
+
+.search-bar {
+  text-align: center;
+  width: 360px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-search {
+  width: 80px;
+  font-weight: 700;
+  border-radius: 10px;
+
+}
+
+.btn-search:hover {
+  background-color: rgb(54, 165, 170);
+}
+
+p , .total-price {
+  font-size: 24px;
+}
+
+.empty-cart , .buy {
+  width: 240px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+.empty-cart:hover {
+  background-color: rgb(241, 234, 224);
+}
+
+.buy {
+  font-weight: 900;
+}
+
+.buy:hover {
+  background-color: rgb(234, 159, 51);
+}
+
+/* color reference: https://www.schemecolor.com/shopping-therapy.php */
